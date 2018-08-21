@@ -1,209 +1,294 @@
-/* line 2, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_noDefaultStyle.scss */
+/* line 2, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/_noDefaultStyle.scss */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-/* line 6, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_noDefaultStyle.scss */
+/* line 6, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/_noDefaultStyle.scss */
 a {
   text-decoration: none;
   color: black;
 }
 
-/* line 10, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_noDefaultStyle.scss */
+/* line 10, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/_noDefaultStyle.scss */
 ul, ol {
   list-style: none;
 }
 
-/*shadow*/
-/*FlexBox*/
-/* line 23, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_varsMixExten.scss */
-body #menu ul, body header {
+/*
+width of element:
+	12 cols - 100%
+	11 cols - 091,666666666%
+	10 cols - 083,333333333%
+	09 cols - 075%
+	08 cols - 066,666666666%
+	07 cols - 058,333333333%
+	06 cols - 050%
+	05 cols - 041,666666666%
+	04 cols - 033,333333333%
+	03 cols - 025%
+	02 cols - 016,666666666%
+	01 cols - 008,333333333%
+	00 cols - 000%
+*/
+/*Extends*/
+/*FlexBoxes*/
+/* line 73, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/_varsMixinExtends.scss */
+body .fixed-top .logo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-/* line 29, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_varsMixExten.scss */
-body #menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* line 35, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_varsMixExten.scss */
-body header #descSect {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/* line 53, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/_varsMixExten.scss */
-body #menu #logo, body #menu ul li, body #menu ul li a, body header #imgSect, body header #imgSect #img {
+/* line 79, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/_varsMixinExtends.scss */
+body .fixed-top div ul li, body .fixed-top div ul li .luxFX, body main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-@font-face {
-  font-family: 'Raleway-Light';
-  src: url(../Resources/Raleway-Light.ttf);
-}
-
-/* line 7, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
+/*Mixins*/
+/* line 5, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
 body {
+  background: #1e3641;
   display: block;
-  background-color: #1e3641;
-  /*background-image: url(../Resources/BckGrnd.svg);*/
-}
-
-/* line 11, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu {
-  width: 100%;
-  background-color: #1e3641;
-  height: 50px;
-  position: fixed;
-  top: 0;
   font-family: "Raleway-Light";
-  color: #f3c860;
 }
 
-/* line 20, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu #logo {
-  width: 30%;
-  height: 80%;
-  margin-left: 10px;
+/* line 9, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #1e3641;
+  top: 0;
+  position: fixed;
+}
+
+/* line 15, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top .logo {
   font-size: 20px;
-  flex-wrap: wrap;
-}
-
-/* line 27, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul {
-  margin-right: 10px;
-  width: 50%;
-  height: 80%;
-}
-
-/* line 31, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li {
-  width: 25%;
-  height: 100%;
-  /*a{
-					@include widthHeightsize(100%, 100%);
-					color: $third-color100;
-					text-transform: uppercase;
-					font-size: 12px;
-					border-top: 1px solid $third-color50;
-					border-bottom: 1px solid $third-color50;
-					border-right: 1px solid $third-color50;
-					border-left: none;
-				}
-				&:first-child a{
-					border-top: 1px solid $third-color50;
-					border-bottom: 1px solid $third-color50;
-					border-left: 1px solid $third-color50;
-				}*/
-}
-
-/* line 49, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li .Dluxe {
-  background: transparent;
-  background: linear-gradient(0deg, #f3c860, rgba(126, 104, 50, 0.8), rgba(126, 116, 93, 0), rgba(71, 65, 52, 0));
-  background-position: 0% 0%;
-  background-size: 300% 300%;
-}
-
-/* line 56, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li .Dluxe:hover {
-  background-position: 0% 90%;
-}
-
-/* line 59, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li a:hover {
-  letter-spacing: 6px;
-  color: #dcd0b0;
-}
-
-/* line 63, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li a:active {
-  transform: translateY(2px);
-  transition: 0.02s;
-}
-
-/* line 67, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body #menu ul li a {
-  width: 90%;
-  height: 100%;
+  letter-spacing: 0.9em;
   color: #f3c860;
-  text-transform: uppercase;
-  font-size: 13px;
-  border-bottom: 1px solid rgba(243, 200, 96, 0.5);
-  transition: 0.7s ease-out;
-  letter-spacing: 2px;
-  border-radius: 20px 20px 0px 0px;
+  text-align: center;
 }
 
-/* line 83, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body header {
-  margin-top: 50px;
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 15, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top .logo {
+    height: 80%;
+    width: 83.33333%;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+  /* line 15, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top .logo {
+    height: 80%;
+    width: 33.33333%;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 1008px) {
+  /* line 15, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top .logo {
+    height: 80%;
+    width: 33.33333%;
+    margin-left: 10px;
+  }
+}
+
+/* line 34, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 34, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div {
+    height: 80%;
+    width: 8.33333%;
+  }
+  /* line 37, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div::before {
+    content: "";
+    background-image: url(../Resources/menu.svg);
+    height: 40px;
+    width: 40px;
+    background-position: 0px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+  /* line 34, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div {
+    height: 80%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1008px) {
+  /* line 34, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div {
+    height: 80%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 54, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div:hover ul {
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+  }
+}
+
+/* line 60, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div ul {
+  height: 80%;
   width: 100%;
-  height: auto;
 }
 
-/* line 87, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body header section {
-  width: 50%;
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 60, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul {
+    transition: 0.6s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #23232d;
+    height: 100%;
+    width: 0%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+  /* line 60, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1008px) {
+  /* line 60, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+/* line 78, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div ul li {
   height: 100%;
+  width: auto;
+  flex-grow: 1;
 }
 
-/* line 92, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body header #imgSect #img {
-  width: 300px;
-  height: 300px;
-  background-image: url(../Resources/manImg.jpg);
-  background-size: cover;
-  background-position: 0px 0px;
-  border-radius: 100%;
-  border: 4px solid #f3c860;
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 78, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul li {
+    height: 40px;
+    width: 90%;
+  }
 }
 
-/* line 104, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body header #descSect h1 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+/* line 85, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div ul li .luxFX {
+  letter-spacing: 0.7em;
+  font-size: 10px;
+  border-bottom: 1px solid rgba(243, 200, 96, 0.5);
+  transition: 0.6s ease;
+  text-transform: uppercase;
+  color: #f3c860;
+  background: linear-gradient(0deg, #f3c860, rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+  background-position: 50% 15%;
+  background-size: 300% 300%;
+  border-radius: 20px 20px 0px 0px;
+  opacity: 0.8;
 }
 
-/* line 108, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body header #descSect p {
-  padding-top: 50px;
-  padding-bottom: 50px;
+@media (min-width: 160px) and (max-width: 640px) {
+  /* line 85, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul li .luxFX {
+    background-position: 50% 1%;
+    border: 1px solid rgba(243, 200, 96, 0.5);
+    height: 50px;
+    width: 90%;
+    border-radius: 0px 0px 0px 0px;
+  }
 }
 
-/* line 114, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
+@media (min-width: 641px) and (max-width: 1007px) {
+  /* line 85, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul li .luxFX {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1008px) {
+  /* line 85, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+  body .fixed-top div ul li .luxFX {
+    height: 100%;
+    width: 80%;
+  }
+}
+
+/* line 110, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div ul li .luxFX:active {
+  opacity: 1;
+  transition: 0.05s ease;
+}
+
+/* line 115, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body .fixed-top div ul li:hover .luxFX {
+  background-position: 50% 99%;
+  color: #fff;
+  letter-spacing: 0.9em;
+}
+
+/* line 124, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
 body main {
+  margin-top: 50px;
+}
+
+/* line 128, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
+body header {
+  height: 620px;
   width: 100%;
-  height: 1200px;
-  background-color: rgba(250, 0, 250, 0.7);
 }
 
-/* line 117, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
-body main #service {
-  background-image: url(../Resources/bgImg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* line 123, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/Programming/BabitaPage/SCSS/style.scss */
+/* line 132, C:/Users/mmedina/Documents/Programming/Training/Training-Sass/scss/style.scss */
 body footer {
-  width: 100%;
   height: 300px;
+  width: 100%;
   background-color: #23232d;
   box-shadow: 0px -3px 18px 2px rgba(0, 0, 0, 0.7);
   border-top: 5px solid #19191e;
 }
 
-/*# sourceMappingURL=../CSS/style.map */
+/*# sourceMappingURL=../css/style.map */
