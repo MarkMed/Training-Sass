@@ -1,0 +1,58 @@
+//_varsMixExten.scss
+$primary-color: rgba(30, 54, 65, 1);
+$secondary-color: rgba(35, 35, 45, 1);
+$secondary-color-dk: rgba(25, 25, 30, 1);
+$third-color100: rgba(243, 200, 96, 1);
+$third-color50: rgba(243, 200, 96, 0.5);
+$third-color0: rgba(243, 200, 96, 0);
+$fourth-color:#dcd0b0;
+$menuHeight: 50px;
+/*shadow*/
+@mixin shadow($alpha){
+	color: rgba(0,0,0, ($alpha)/100)
+}
+@mixin widthHeightsize($x, $y){
+	width: $x;
+	height: $y;
+}
+%centeredItem{
+	margin: 0 auto;
+}
+
+/*FlexBox*/
+%FB-row-spcA-cen{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+%FB-row-spcB-cen{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+%FB-col-spcA-cen{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+%FB-col-spcB-cen{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+%FB-row-cen-cen{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+%FB-col-cen-cen{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
