@@ -2,11 +2,16 @@
 @import 'noDefaultStyle';
 @import 'varsMixinExtends';
 $menuHeight:50px;
+@font-face {
+	font-family: "RalewayLight";
+	src: url(../Resources/Raleway-Light.ttf);
+}
 body {
 	background: $primary-color;
 	display: block;
-	font-family: "Raleway-Light";
+	font-family: "RalewayLight";
 	.fixed-top{
+		z-index: 99;
 		@include flex(row, space-between, center);
 		@include widthHeightsize($width-12, $menuHeight);
 		background-color: $primary-color;
@@ -16,7 +21,7 @@ body {
 			@extend %FB-row-cen-cen;
 			font-size: 20px;
 			letter-spacing: 0.9em;
-			color: $third-color100;
+			color: $third-color80;
 			text-align: center;
 			@media (min-width: 160px) and (max-width: $smallWidth){
 				@include widthHeightsize($width-10, 80%);
@@ -53,7 +58,7 @@ body {
 			}
 			&:hover ul{
 				@media (min-width: 160px) and (max-width: $smallWidth){
-					@include widthHeightsize($width-6, 100%);
+					transform: translateX(0%);
 					opacity: 1;
 				}
 			}
@@ -67,7 +72,19 @@ body {
 					top: 0;
 					right: 0;
 					background-color: $secondary-color;
-					@include widthHeightsize($width-0, 100%);
+					@include widthHeightsize($width-6, 100%);
+					transform: translateX(100%);
+					&::before{
+						content:"Opciones";
+						text-transform: uppercase;
+						top: 0;
+						@include widthHeightsize($width-12, 10%);
+						position: absolute;
+						@include flex(column, flex-start, center);
+						color: $third-color60;
+						letter-spacing: 0.6em;
+						padding-top: 10px;
+					}
 				}
 				@media (min-width: $smallWidth+1) and (max-width: $mediumWidth){
 					@include flex(row, space-around, center);
@@ -76,12 +93,13 @@ body {
 					@include flex(row, space-around, center);
 				}
 				li{
+					flex-grow: 1;
 					@media (min-width: 160px) and (max-width: $smallWidth){
-						@include widthHeightsize(90%, 40px);
+						@include widthHeightsize(90%, auto);
+						flex-grow: 0;
 					}
 					@extend %FB-col-cen-cen;
 					@include widthHeightsize(auto, 100%);
-					flex-grow: 1;
 					.luxFX{
 						@extend %FB-col-cen-cen;
 						letter-spacing: 0.7em;
@@ -111,11 +129,11 @@ body {
 							opacity: 1;
 							transition: 0.05s ease;
 						}
-					}
-					&:hover .luxFX{
-						background-position: 50% 99%;
-						color: #fff;
-						letter-spacing: 0.9em;
+						&:hover{
+							background-position: 50% 99%;
+							color: #fff;
+							letter-spacing: 0.9em;
+						}
 					}		
 				}
 			}
