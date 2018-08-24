@@ -28,7 +28,7 @@ body {
 			color: $third-color100;
 			text-align: center;
 			@media (min-width: 160px) and (max-width: $smallWidth){
-				@include widthHeightsize($width-10, 80%);
+				@include widthHeightsize($width-11, 80%);
 				margin-top: 5px;
 			}
 			@media (min-width: $smallWidth+1) and (max-width: $mediumWidth){
@@ -78,6 +78,7 @@ body {
 					background-color: $secondary-color;
 					@include widthHeightsize($width-6, 100%);
 					transform: translateX(100%);
+					padding-top: 20px;
 					&::before{
 						content:"Opciones";
 						text-transform: uppercase;
@@ -99,7 +100,7 @@ body {
 				li{
 					flex-grow: 1;
 					@media (min-width: 160px) and (max-width: $smallWidth){
-						@include widthHeightsize(90%, auto);
+						@include widthHeightsize(90%, 50%);
 						flex-grow: 0;
 					}
 					@extend %FB-col-cen-cen;
@@ -120,8 +121,10 @@ body {
 						@media (min-width: 160px) and (max-width: $smallWidth){
 							background-position: 50% 1%;
 							border: 1px solid $third-color50;
-							@include widthHeightsize(90%, 50px);
+							@include widthHeightsize(90%, 100%);
 							border-radius: 0px 0px 0px 0px;
+							max-height: 50px;
+							min-height: 30px;
 						}
 						@media (min-width: $smallWidth+1) and (max-width: $mediumWidth){
 							@include widthHeightsize(100%, 100%);

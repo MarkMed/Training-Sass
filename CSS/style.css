@@ -84,7 +84,7 @@ body .fixed-top .logo {
 @media (min-width: 160px) and (max-width: 640px) {
   body .fixed-top .logo {
     height: 80%;
-    width: 83.33333%;
+    width: 91.66667%;
     margin-top: 5px;
   }
 }
@@ -170,6 +170,7 @@ body .fixed-top div ul {
     height: 100%;
     width: 50%;
     transform: translateX(100%);
+    padding-top: 20px;
   }
   body .fixed-top div ul::before {
     content: "Opciones";
@@ -214,7 +215,7 @@ body .fixed-top div ul li {
 
 @media (min-width: 160px) and (max-width: 640px) {
   body .fixed-top div ul li {
-    height: auto;
+    height: 50%;
     width: 90%;
     flex-grow: 0;
   }
@@ -238,9 +239,11 @@ body .fixed-top div ul li .luxFX {
   body .fixed-top div ul li .luxFX {
     background-position: 50% 1%;
     border: 1px solid rgba(243, 200, 96, 0.5);
-    height: 50px;
+    height: 100%;
     width: 90%;
     border-radius: 0px 0px 0px 0px;
+    max-height: 50px;
+    min-height: 30px;
   }
 }
 
