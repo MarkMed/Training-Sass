@@ -3,13 +3,17 @@
 @import 'varsMixinExtends';
 $menuHeight:50px;
 @font-face {
-	font-family: "RalewayLight";
-	src: url(../Resources/Raleway-Light.ttf);
+	font-family: "Cinzel";
+	src: url(../Resources/Cinzel-Regular.ttf);
+}
+@font-face {
+	font-family: "Julius";
+	src: url(../Resources/JuliusSansOne-Regular.ttf);
 }
 body {
 	background: $primary-color;
 	display: block;
-	font-family: "RalewayLight";
+	font-family: "Cinzel";
 	.fixed-top{
 		z-index: 99;
 		@include flex(row, space-between, center);
@@ -21,7 +25,7 @@ body {
 			@extend %FB-row-cen-cen;
 			font-size: 20px;
 			letter-spacing: 0.9em;
-			color: $third-color80;
+			color: $third-color100;
 			text-align: center;
 			@media (min-width: 160px) and (max-width: $smallWidth){
 				@include widthHeightsize($width-10, 80%);

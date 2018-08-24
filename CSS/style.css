@@ -1,16 +1,13 @@
-/* line 2, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/_noDefaultStyle.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 6, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/_noDefaultStyle.scss */
 a {
   text-decoration: none;
   color: black;
 }
 
-/* line 10, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/_noDefaultStyle.scss */
 ul, ol {
   list-style: none;
 }
@@ -33,7 +30,6 @@ width of element:
 */
 /*Extends*/
 /*FlexBoxes*/
-/* line 75, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/_varsMixinExtends.scss */
 body .fixed-top .logo {
   display: flex;
   flex-direction: row;
@@ -41,7 +37,6 @@ body .fixed-top .logo {
   align-items: center;
 }
 
-/* line 81, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/_varsMixinExtends.scss */
 body .fixed-top div ul li, body .fixed-top div ul li .luxFX, body main {
   display: flex;
   flex-direction: column;
@@ -51,18 +46,21 @@ body .fixed-top div ul li, body .fixed-top div ul li .luxFX, body main {
 
 /*Mixins*/
 @font-face {
-  font-family: "RalewayLight";
-  src: url(../Resources/Raleway-Light.ttf);
+  font-family: "Cinzel";
+  src: url(../Resources/Cinzel-Regular.ttf);
 }
 
-/* line 9, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
+@font-face {
+  font-family: "Julius";
+  src: url(../Resources/JuliusSansOne-Regular.ttf);
+}
+
 body {
   background: #1e3641;
   display: block;
-  font-family: "RalewayLight";
+  font-family: "Cinzel";
 }
 
-/* line 13, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top {
   z-index: 99;
   display: flex;
@@ -76,16 +74,14 @@ body .fixed-top {
   position: fixed;
 }
 
-/* line 20, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top .logo {
   font-size: 20px;
   letter-spacing: 0.9em;
-  color: rgba(243, 200, 96, 0.8);
+  color: #f3c860;
   text-align: center;
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 20, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top .logo {
     height: 80%;
     width: 83.33333%;
@@ -94,7 +90,6 @@ body .fixed-top .logo {
 }
 
 @media (min-width: 641px) and (max-width: 1007px) {
-  /* line 20, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top .logo {
     height: 80%;
     width: 33.33333%;
@@ -103,7 +98,6 @@ body .fixed-top .logo {
 }
 
 @media (min-width: 1008px) {
-  /* line 20, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top .logo {
     height: 80%;
     width: 33.33333%;
@@ -111,7 +105,6 @@ body .fixed-top .logo {
   }
 }
 
-/* line 39, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div {
   display: flex;
   flex-direction: column;
@@ -120,12 +113,10 @@ body .fixed-top div {
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 39, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div {
     height: 80%;
     width: 8.33333%;
   }
-  /* line 42, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div::before {
     content: "";
     background-image: url(../Resources/menu.svg);
@@ -139,7 +130,6 @@ body .fixed-top div {
 }
 
 @media (min-width: 641px) and (max-width: 1007px) {
-  /* line 39, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div {
     height: 80%;
     width: 50%;
@@ -147,7 +137,6 @@ body .fixed-top div {
 }
 
 @media (min-width: 1008px) {
-  /* line 39, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div {
     height: 80%;
     width: 50%;
@@ -155,21 +144,18 @@ body .fixed-top div {
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 59, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div:hover ul {
     transform: translateX(0%);
     opacity: 1;
   }
 }
 
-/* line 65, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div ul {
   height: 80%;
   width: 100%;
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 65, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul {
     transition: 0.6s ease;
     opacity: 0;
@@ -185,7 +171,6 @@ body .fixed-top div ul {
     width: 50%;
     transform: translateX(100%);
   }
-  /* line 77, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul::before {
     content: "Opciones";
     text-transform: uppercase;
@@ -204,7 +189,6 @@ body .fixed-top div ul {
 }
 
 @media (min-width: 641px) and (max-width: 1007px) {
-  /* line 65, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul {
     display: flex;
     flex-direction: row;
@@ -214,7 +198,6 @@ body .fixed-top div ul {
 }
 
 @media (min-width: 1008px) {
-  /* line 65, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul {
     display: flex;
     flex-direction: row;
@@ -223,7 +206,6 @@ body .fixed-top div ul {
   }
 }
 
-/* line 95, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div ul li {
   flex-grow: 1;
   height: 100%;
@@ -231,7 +213,6 @@ body .fixed-top div ul li {
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 95, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul li {
     height: auto;
     width: 90%;
@@ -239,7 +220,6 @@ body .fixed-top div ul li {
   }
 }
 
-/* line 103, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div ul li .luxFX {
   letter-spacing: 0.7em;
   font-size: 10px;
@@ -255,7 +235,6 @@ body .fixed-top div ul li .luxFX {
 }
 
 @media (min-width: 160px) and (max-width: 640px) {
-  /* line 103, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul li .luxFX {
     background-position: 50% 1%;
     border: 1px solid rgba(243, 200, 96, 0.5);
@@ -266,7 +245,6 @@ body .fixed-top div ul li .luxFX {
 }
 
 @media (min-width: 641px) and (max-width: 1007px) {
-  /* line 103, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul li .luxFX {
     height: 100%;
     width: 100%;
@@ -274,38 +252,32 @@ body .fixed-top div ul li .luxFX {
 }
 
 @media (min-width: 1008px) {
-  /* line 103, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
   body .fixed-top div ul li .luxFX {
     height: 100%;
     width: 80%;
   }
 }
 
-/* line 128, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div ul li .luxFX:active {
   opacity: 1;
   transition: 0.05s ease;
 }
 
-/* line 132, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body .fixed-top div ul li .luxFX:hover {
   background-position: 50% 99%;
   color: #fff;
   letter-spacing: 0.9em;
 }
 
-/* line 142, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body main {
   margin-top: 50px;
 }
 
-/* line 146, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body header {
   height: 620px;
   width: 100%;
 }
 
-/* line 150, C:/Users/Admin.DESKTOP-0Q23CA9/Documents/GitHub/Training-Sass/scss/style.scss */
 body footer {
   height: 300px;
   width: 100%;
@@ -313,5 +285,3 @@ body footer {
   box-shadow: 0px -3px 18px 2px rgba(0, 0, 0, 0.7);
   border-top: 5px solid #19191e;
 }
-
-/*# sourceMappingURL=../css/style.map */
